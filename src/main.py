@@ -18,7 +18,7 @@ mapping = {
     "గా": "as", "ga": "as",
     "తో": "with", "tho": "with",
     "ప్రయత్నించు": "try", "prayatninchu": "try",
-    "తప్పు": "except", "tappa": "except",
+    "తప్ప": "except", "tappa": "except",
     "చివరగా": "finally", "chivariga": "finally",
     "నిజం": "True", "nijam": "True",
     "అబద్ధం": "False", "abaddham": "False",
