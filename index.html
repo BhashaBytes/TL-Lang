@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8" />
+  <title>TL-Lang: Telugu Inspired Programming</title>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="https://bhashabytes.github.io/" class="site-logo" aria-label="BhashaBytes Home">
+    <img src="logo.png" alt="BhashaBytes Logo" />
+  </a>
+  <h1>TL-Lang: Telugu-Inspired Programming</h1>
+
+  <div class="intro-card">
+    <p>
+      Welcome to <strong>TL-Lang</strong> – a programming language designed especially for Telugu speakers!
+      TL-Lang makes coding more intuitive by using Telugu words and their transliterations as keywords,
+      instead of English-based Python syntax. It’s beginner-friendly and runs fully on Python via a translation layer.
+    </p>
+    <p>
+      Write code below, run it instantly, and explore TL-Lang’s features with live examples. Learning programming
+      has never been this friendly!
+    </p>
+  </div>
+
+  <div class="container">
+    <textarea id="teluguCode" rows="10" placeholder="Type your Telugu code here...">చూపించు("Hello TL-Lang!")</textarea>
+    <br>
+    <button onclick="runCode()">Run Code</button>
+    <pre id="output">Output will appear here...</pre>
+  </div>
+
+  <h2>Documentation & Examples</h2>
+  <div class="docs">
+    <h3>Print (చూపించు / chuppinchu)</h3>
+    <pre>చూపించు("Hello World")</pre>
+
+    <h3>Functions (నివారణ్చు / nivarinchu)</h3>
+    <pre>నివారణ్చు జోడించు(a, b):
+    తిరిగి ఇవ్వు a + b
+చూపించు("ఫలితం =", జోడించు(5, 3))</pre>
+
+    <h3>Input (తీసుకో / tisuko)</h3>
+    <pre>a = int(తీసుకో("num1:"))
+b = int(తీసుకో("num2:"))
+చూపించు("మొత్తం =", a + b)</pre>
+
+    <h3>Conditionals</h3>
+    <pre>i = 5
+ఒకవేళ i > 3:
+    చూపించు("i పెద్దది")
+ఒకవెలలేదా i == 3:
+    చూపించు("i సమానమైంది")
+లేదా:
+    చూపించు("i చిన్నది")</pre>
+
+    <h3>Loops</h3>
+    <pre>కొసం x in  [1,2,3]:
+    చూపించు("x =", x)
+i = 0
+అయితే i < 3:
+    చూపించు("i =", i)
+    i += 1</pre>
+
+    <h3>Loop Control</h3>
+    <pre>కొసం x in [1,2,3]:
+    ఒకవేళ x == 2:
+        చూపించు("రెండు దొరికింది")
+        అగ్గు
+    లేదా:
+        చూపించు(x)</pre>
+
+    <h3>Booleans & None</h3>
+    <pre>ఒకవేళ నిజం:
+    చూపించు("true")
+ఒకవెలలేదా అబద్ధం:
+    చూపించు("false")
+చూపించు("విలువ లేదు =", ఏదీ లేదు)</pre>
+
+    <h3>Exceptions</h3>
+    <pre>ప్రయత్నించు:
+    1 / 0
+తప్పు ZeroDivisionError:
+    చూపించు("శూన్యంతో భాగించడం సాధ్యం కాదు")
+చివరగా:
+    చూపించు("ఇది ఎప్పుడూ జరుగుతుంది")</pre>
+
+    <h3>Imports</h3>
+    <pre>దిగుమతి math గా m
+చూపించు(m.sqrt(4))</pre>
+
+    <p>Modify examples above and run your own TL-Lang code above!</p>
+  </div>
+
+  <h2>TL-Lang Keywords</h2>
+  <div class="reference-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Python</th>
+          <th>Telugu Script</th>
+          <th>Transliteration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>print</td><td>చూపించు</td><td>chuppinchu</td></tr>
+        <tr><td>input</td><td>తీసుకో</td><td>tisuko</td></tr>
+        <tr><td>if</td><td>ఒకవేళ</td><td>okavela</td></tr>
+        <tr><td>elif</td><td>ఒకవెలలేదా</td><td>okavelaledha</td></tr>
+        <tr><td>else</td><td>లేదా</td><td>ledha</td></tr>
+        <tr><td>for</td><td>కొసం</td><td>kosam</td></tr>
+        <tr><td>or</td><td>లేకపోతే</td><td>lekapothe</td></tr>
+        <tr><td>while</td><td>అయితే</td><td>ayithe</td></tr>
+        <tr><td>def</td><td>నివారణ్చు</td><td>nivarinchu</td></tr>
+        <tr><td>class</td><td>వర్గం</td><td>vargam</td></tr>
+        <tr><td>return</td><td>తిరిగి ఇవ్వు</td><td>tirigiivvu</td></tr>
+        <tr><td>break</td><td>అగ్గు</td><td>aggu</td></tr>
+        <tr><td>continue</td><td>కొనసాగించు</td><td>konasaginchu</td></tr>
+        <tr><td>import</td><td>దిగుమతి</td><td>digumati</td></tr>
+        <tr><td>from</td><td>నుండి</td><td>nundi</td></tr>
+        <tr><td>as</td><td>గా</td><td>ga</td></tr>
+        <tr><td>with</td><td>తో</td><td>tho</td></tr>
+        <tr><td>try</td><td>ప్రయత్నించు</td><td>prayatninchu</td></tr>
+        <tr><td>except</td><td>తప్పు</td><td>tappa</td></tr>
+        <tr><td>finally</td><td>చివరగా</td><td>chivariga</td></tr>
+        <tr><td>True</td><td>నిజం</td><td>nijam</td></tr>
+        <tr><td>False</td><td>అబద్ధం</td><td>abaddham</td></tr>
+        <tr><td>None</td><td>ఏదీ లేదు</td><td>ediledu</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    let pyodideReady = false;
+    let pyodide;
+
+    async function loadPyodideAndPackages() {
+      pyodide = await loadPyodide();
+
+      // redirect print → <pre>
+      pyodide.runPython(`
+import sys
+from js import document, prompt
+
+class OutputCatcher:
+    def write(self, s):
+        if s.strip():
+            document.getElementById("output").textContent += s + "\\n"
+    def flush(self): pass
+
+sys.stdout = OutputCatcher()
+sys.stderr = OutputCatcher()
+
+# redefine input
+def input(msg=""):
+    resp = prompt(str(msg))
+    return "" if resp is None else str(resp)
+`);
+      pyodideReady = true;
+    }
+    loadPyodideAndPackages();
+
+    const mapping = {
+      "చూపించు": "print", "chuppinchu": "print",
+      "తీసుకో": "input", "tisuko": "input",
+      "ఒకవేళ": "if", "okavela": "if",
+      "ఒకవెలలేదా": "elif", "okavelaledha": "elif",
+      "లేదా": "else", "ledha": "else",
+      "కొసం": "for", "kosam": "for",
+      "అయితే": "while", "ayithe": "while",
+      "నివారణ్చు": "def", "nivarinchu": "def",
+      "వర్గం": "class", "vargam": "class",
+      "తిరిగి ఇవ్వు": "return", "tirigiivvu": "return",
+      "అగ్గు": "break", "aggu": "break",
+      "కొనసాగించు": "continue", "konasaginchu": "continue",
+      "దిగుమతి": "import", "digumati": "import",
+      "నుండి": "from", "nundi": "from",
+      "గా": "as", "ga": "as",
+      "తో": "with", "tho": "with",
+      "ప్రయత్నించు": "try", "prayatninchu": "try",
+      "తప్పు": "except", "tappa": "except",
+      "చివరగా": "finally", "chivariga": "finally",
+      "నిజం": "True", "nijam": "True",
+      "అబద్ధం": "False", "abaddham": "False",
+      "ఏదీ లేదు": "None", "ediledu": "None",
+      "లేకపోతే": "or", "lekapothe": "or"
+    };
+
+    function escapeRegExp(str) {
+      return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function translate(code) {
+      for (let tel in mapping) {
+        const re = new RegExp(`(?<!\\w)${escapeRegExp(tel)}(?!\\w)`, 'gu');
+        code = code.replace(re, mapping[tel]);
+      }
+      return code;
+    }
+
+    async function runCode() {
+      if (!pyodideReady) {
+        alert("Pyodide is still loading...");
+        return;
+      }
+      document.getElementById("output").textContent = "";
+      const rawCode = document.getElementById("teluguCode").value;
+      const pyCode = translate(rawCode);
+
+      try {
+        await pyodide.runPythonAsync(pyCode);
+      } catch (err) {
+        document.getElementById("output").textContent += "Error: " + err + "\n";
+      }
+    }
+  </script>
+</body>
+</html>
